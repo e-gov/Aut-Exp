@@ -5,6 +5,9 @@
 'use strict';
 
 /* Vajalike teekide laadimine */
+const fs = require('fs'); // Sertide laadimiseks
+const path = require('path');
+const https = require('https');
 
 /* Veebiraamistik Express */
 const express = require('express');
