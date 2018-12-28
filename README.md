@@ -41,6 +41,7 @@ npm install --save express
 npm install --save ejs
 npm install --save pkijs
 npm install --save asn1js
+npm install --save jsonwebtoken
 ```
 
 ### ID-kaardiga autentimine Node.js-s
@@ -76,6 +77,14 @@ Rakendus loeb ID-kaardilt nii autentimis- kui ka allkirjastamisserdi. Seda teeb 
 ### Allkirjastamine
 
 `allkirjasta.js`
+
+Käivita server:
+
+`node allkirjasta`
+
+Sirvikus ava:
+
+`https://<host>:8000`
 
 See ei ole täielik, XML konteineri ja ajatempliga allkiri, vaid lihtsam.
 
