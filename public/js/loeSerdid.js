@@ -44,7 +44,6 @@ function alusta() {
       );
   });
 
-
   function kuvaSert(cert) {
     // Tee AJAX-pöördumine serveri poolele sserdi dekodeerimiseks
     $.ajax(
