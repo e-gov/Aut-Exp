@@ -1,0 +1,99 @@
+body {
+  max-width: 40em;
+  margin: 0 0; 
+  padding: 0.6em 1.5em 6em 2em; 
+}
+
+body, input {
+  font-family: Arial, serif;
+  font-size: 17px; 
+  color: #24292E !important;
+  line-height: 1.5 !important;
+}  
+
+.jalus {
+  border-top: 1px solid #607D8B;
+  margin-top: 4em;
+  padding-bottom: 4em;
+}
+
+h1 {
+  font-size: 24px !important;
+  font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+  margin-top: 1em;
+  margin-bottom: 1rem;
+}
+
+.toimingunupp {
+  margin: 0.5rem 1rem;
+  border-radius: 10px; border: 1px solid turquoise;
+  padding: 10px; width: 10rem; text-align: center;
+}
+
+.rida {
+  display: flex; margin: 1rem 0;
+}
+
+.label {
+  width: 10rem;
+}
+
+#Allkirjastan {
+  margin: 1.5rem 0;
+  border-radius:10px; border: 3px solid tomato;
+  color: tomato;
+  padding: 10px; width: 15rem; text-align: center;
+  cursor: pointer;
+}
+
+.ikoon {
+  font-family: 'Material Icons';
+  font-size: 48px; color: #757575;
+  border: 1px solid green;
+}
+
+.nupp {
+  cursor: pointer;
+}
+
+/*#region Lingid */
+a[href] {
+  color: #607D8B;
+  text-decoration: none;
+  border-bottom: 1px dotted #607D8B;
+  padding: 0 1px 0;
+  margin: 0 -1px 0;
+}
+a:visited {
+  border-bottom-color: #607D8B;
+}
+
+a[href]:focus,
+a[href]:hover {
+  background: #607D8B;
+  background: rgba(75%, 75%, 75%, .25);
+  border-bottom-width: 3px;
+  margin-bottom: -2px;
+}
+
+.ikoonlink,
+.ikoonlink:focus,
+.ikoonlink:hover {
+  border-bottom: none !important;
+  background: transparent !important;;
+}  
+/*#endregion */
+
+.ok { color: green; }
+.nok { color: Tomato; }
+
+.kood {
+  color: black !important;
+  background-color: #f6f8fa; /* nagu GitHubis */
+  font-family: monospace;
+  font-size: 14pt;
+}
+
+.sammud {
+  margin-top: 0; margin-bottom: 3rem;
+}

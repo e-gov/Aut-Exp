@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Kaardi kontrolli POC</title>
+
+  <% include ../partials/header.ejs %>
+
+    <!-- Including CryptoJS required libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/hmac-sha256.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/enc-base64-min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/css/loeSerdid.css" />
+    <script src='/js/loeSerdid.js'></script>
+</head>
+
+<body onload="alusta();">
+
+  <h1>Kaardi kontrolli POC</h1>
+
+  <div id='abiteave'>
+
+    <p>
+      Veebirakendus pärib kasutaja ID-kaardilt serdi. Päritakse mitte TLS-i,
+      vaid sirviku Javascripti kaudu. Sert saadetakse AJAX-päringuga
+      serveri poolele. Server loeb serdilt serdi nr-i, subjekti ja väljaandja.
+      Server saadab serdilt loetud andmed sirvikusse, kus need kuvatakse.<br>
+      <br>
+      Sirvikus töötav Javascript pöördub <a href='https://github.com/hwcrypto/hwcrypto.js/wiki/ModernAPI' target='_new'>hwcrypto.js</a>, see omakorda <a href='https://github.com/open-eid' target='_new'>ID-kaardi baastarkvara</a> poole.
+      Sõltuvalt sirvikust on baastarkvara komponent <a href='https://github.com/open-eid/chrome-token-signing' target='_new'>Chrome Token Signing</a> vm.<br><br>
+      Serdi pärimisel küsib ID-kaardi baastarkvara alati kasutaja nõusolekut serdi edastamiseks
+      rakendusele. Kaardi seesoleku kontrollimiseks ilma kasutajat tülitamata tuleks
+      rakenduse Javascriptist pöörduda otse ID-kaardi baastarkvara poole (ilma hwcrypto.js-ta).
+      See võimalus vajab veel uurimist.
+    </p>
+
+  </div>
+
+  <p>Kumba serti pärida?</p>
+  <div style='display: flex;'>
+    <div>
+      <input id="radio1" checked="checked" type="radio" name="radio">
+      <label for="radio1">autentimissert (PIN 1)</label>
+    </div>
+    <div style='margin-left: 3rem;'>
+      <input id="radio2" type="radio" name="radio">
+      <label for="radio2">allkirjastamine (PIN 2)</label>
+    </div>
+  </div>
+
+  <div id='tegevusriba' class='inline-riba'>
+    <div class='inline'>
+      Kas ID-kaart on kaardilugejas?
+    </div>
+    <div id='kontrolliNupp' class='tekstinupp inline' title='Kinnita'>
+      Kontrolli
+    </div>
+  </div>
+
+  <div id='logi'>
+  </div>
+
+  <% include ../partials/footer.ejs %>
+
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Allkirjasta nõusolek</title>
+
+  <% include ../partials/header.ejs %>
+
+    <!-- Including CryptoJS required libraries -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/hmac-sha256.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/enc-base64-min.js"></script>
+
+    <!-- hwcrypto ja seonduv vajalik -->
+    <script src="js/hwcrypto-legacy.js"></script>
+    <script src="js/hwcrypto.js"></script>
+    <script src="js/hex2base.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/css/Yhine.css" />
+    <script src='../js/allkirjasta.js' defer></script>
+
+    <title>Volli (POC)</title>
+</head>
+
+<body onload='alusta()'>
+
+  <h1>
+    Nõusolekuteenus Volli (POC)
+  </h1>
+
+  <div id='Toiminguvalikurida' style='display: flex; flex-wrap: wrap; justify-content: center'>
+    <div id='AnnaNupp' class='toimingunupp'>Annan nõusoleku</div>
+    <div id='TyhistaNupp' class='toimingunupp'>Tühistan nõusoleku</div>
+    <div id='MinuNousolekud' class='toimingunupp'>Minu nõusolekud</div>
+  </div>
+
+  <div id='Nousolekukysimisedialoog'>
+    <p>Annan nõusoleku:</p>
+    <label class='rida'>
+      <span class='label'>Kellele:</span>
+      <br>
+      <input id='Kellele' type='text' class='form-control' autocomplete='off'>
+    </label>
+    <label class='rida'>
+      <span class='label'>Milleks:</span>
+      <br>
+      <input id='Milleks' type='text' class='form-control' autocomplete='off'>
+    </label>
+    <label class='rida'>
+      <span class='label'>Mis ajani:</span>
+      <br>
+      <input id='MisAjani' type='text' class='form-control' autocomplete='off'>
+    </label>
+    <div class='rida'>
+      Olen teadlik, et võin nõusoleku igal ajal tagasi võtta.
+      <br> Kinnitan nõusolekut oma allkirjaga.
+    </div>
+    <div class='rida'>
+      Aseta ID-kaart kaardilugejasse ja vajuta "Allkirjastan".
+      <br> Eelnevalt pead olema arvutisse paigaldanud ID-kaardi baastarkvara.
+    </div>
+    <div id='Kinnitusplokk' style='display: flex; justify-content: center;'>
+      <div id='Allkirjastan'>Allkirjastan</div>
+    </div>
+  </div>
+
+  <div id='Teateala'>
+
+  </div>
+
+  <div id='Valjastusala'>
+
+  </div>
+
+  <% include ../partials/footer.ejs %>
+
+</body>
+
+</html>
