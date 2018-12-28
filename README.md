@@ -1,3 +1,12 @@
+**TLS seanss** (_TLS session_) on serveri ja sirviku vahel kokkulepitud turvaparameetrite kogum (ühine krüpteerimisvõti jm). Server ja sirvik lepivad seansi kokku ja kasutavad seda korduvalt. Sirviku järjekordsel pöördumisel serveri poole (HTTP päring) võtavad pooled olemasoleva TLS seansi ja loovad seda kasutades TCP ühenduse (_TCP connection_). Päring saab vastatud ja TCP ühendus suletakse. Kokkulepitud turvaparameetreid s.o TLS seanssi saab aga kasutada edaspidigi. Seda nimetatakse TLS seansi korduvkasutamiseks (_TLS session resumption_). TLS seansi korduvkasutamise aeg on piiratud kasutatava võrgutarkvara (harilikult OpenSSL) seadistusega. Seejärel tuleb seanss uuesti luua. Pooled võivad TLS "seansilepingu" igal ajal uuesti läbi rääkida (_TLS session renegotiation_). Uuesti läbirääkimine (nimetame seda ümberkätlemiseks) võib toimuda nii serveri kui ka sirviku algatusel. Ümberkätlemisel lepivad pooled turvaparameetrid uuesti kokku.
+
+ID-kaardiga autentimise traditsiooniline meetod tugineb TLS seansi kokkuleppimisele. Kokkuleppimise käigus loeb sirvik ID-kaardilt kasutaja autentimisserdi ja edastab selle serverile. Serdi lugemisel küsib sirvik (täpsemalt kasutaja arvutisse paigaldatud ID-kaardi baastarkvara) kasutajalt PIN 1-te.
+
+ID-kaardiga autentimise lahenduses tuleb jälgida, et **autentimine ei toimuks TLS seansi korduvkasutamisega**. Server peab TLS seansi kokkuleppimisel sirvikule teatama, et ta ei soovi seansi korduvkasutamist. Sirvik peab soovi täitma ja see peab avalduma PIN1 küsimises. Platvormiti on seadistused erinevad. Seetõttu tuleb ID-kaardi lahendust kindlasti testida:
+
+- kas ja kuidas kaardi väljavõtmine, aga ka uuesti kaardilugejasse panemine mõjutab autentimist?
+- kas korduval autentimisel (ilma sirvikut sulgemata) küsitakse PIN1?
+
 Repo eesmärk on uurida ja katsetada ID-kaardi kasutamist veebirakendustes:
 
 - ID-kaardiga autentimist traditsioonilisel meetodil (TLS kliendiserdi kaudu)
