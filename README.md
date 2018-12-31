@@ -1,17 +1,17 @@
 
 ### ID-kaardiga autentimist kasutava veebirakenduse testimine
 
-| testi nr  | tee             | oodatav käitumine |
-|----|-----------------|-------------------|
-| 1  | Logi ID-kaardiga sisse. Võta kaart välja. Tee rakenduses mõni oluline toiming. Kas rakendus laseb toimingu teha? | Mõned rakendused jälgivad, kas kaart on sees. |
-| 2  | Logi-ID kaardiga sisse. Logi välja. Logi uuesti sisse. Kas rakendus küsib uuesti sisselogimisel PIN 1-te? |  |
-| 3  | Logi ID-kaardiga sisse mõnda muusse rakendusse. Seejärel ava sirvikus uus sakk ja logi rakendusse sisse. Kas rakendus küsib PIN 1-te? |
-| 4  | Logi ID-kaardiga sisse. Võta kaart välja. Pane kaart uuesti sisse. Kas rakendus laseb tööd jätkata? |  |
-| 5  | Logi ID-kaardiga sisse. Võta kaart välja. Pane teise inimese kaart sisse. Kas rakendus laseb tööd jätkata? |  |
-| 6  | Logi ID-kaardiga sisse. Sule sakk. Ava uus sakk. Ava rakendus. Kas oled sisselogitud? | |
-| 7  | Logi ID-kaardiga sisse. Sule sirvik. Ava sirvik uuesti. Kas oled sisselogitud? | |
-| 8  | Logi ID-kaardiga sisse. Sule sakk. Sule sirvik. Ava sirvik uuesti. Ava rakendus. Kas oled sisselogitud? | |
-| 9  | Logi ID-kaardiga sisse. Logi välja. Võta kaart välja. Pane teise inimese kaart sisse. Logi sisse. Kas rakendus küsib PIN 1-te? | |
+| testi nr  | tee             | jah |      ei      |
+|-----------|-----------------|-----|--------------|
+| 1  | Logi ID-kaardiga sisse. Võta kaart välja. Tee rakenduses mõni oluline toiming. Kas rakendus laseb toimingu teha? |  | 👍 Ei saa eeldada, et kaardi kaardilugejas hoidmine on autendituna püsimise tingimus.| 👍 Mõni rakendus suudab jälgida, kas kaart on sees.  |
+| 2  | Logi-ID kaardiga sisse. Logi välja. Logi uuesti sisse. Kas rakendus küsib uuesti sisselogimisel PIN 1-te? |  👍 | |
+| 3  | Logi ID-kaardiga sisse mõnda muusse rakendusse. Seejärel ava sirvikus uus sakk ja logi rakendusse sisse. Kas rakendus küsib PIN 1-te? | 👍 | 😮 |
+| 4  | Logi ID-kaardiga sisse. Võta kaart välja. Pane kaart uuesti sisse. Kas rakendus laseb tööd jätkata? | 👍 | 👍 |
+| 5  | Logi ID-kaardiga sisse. Võta kaart välja. Pane teise inimese kaart sisse. Kas rakendus laseb tööd jätkata? | 👍 Ei saa eeldada, et kaardi kaardilugejas hoidmine on autendituna püsimise tingimus. | 👍 |
+| 6  | Logi ID-kaardiga sisse. Sule sakk. Ava uus sakk. Ava rakendus. Kas oled sisselogitud? | 👍 Veebirakendusel (selle serveripoolsel osal) on saki sulgemist raske kinni püüda. | 👍 |
+| 7  | Logi ID-kaardiga sisse. Sule sirvik. Ava sirvik uuesti. Kas oled sisselogitud? | 😮 | 👍 |
+| 8  | Logi ID-kaardiga sisse. Sule sakk. Sule sirvik. Ava sirvik uuesti. Ava rakendus. Kas oled sisselogitud? | | |
+| 9  | Logi ID-kaardiga sisse. Logi välja. Võta kaart välja. Pane teise inimese kaart sisse. Logi sisse. Kas rakendus küsib PIN 1-te? | 👍 | 💥 ID-kaardiga autentimine on vigaselt teostatud! |
 
 **
 
