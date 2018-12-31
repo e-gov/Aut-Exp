@@ -1,5 +1,6 @@
 
-### ID-kaardiga autentimist kasutava veebirakenduse testimine
+### ID-kaardiga autentimine testimine
+Järgnevate testidega saab uurida, kas ID-kaardiga autentimine on õigesti teostatud. Teostuse õigsuse määravad nii välise autentimisteenuse teostus (kui veebirakendus kasutab autentimisteenust) kui ka veebirakenduse enda teostus (kui veebirakendus teeb autentimise ise), samuti seansihalduse teostus (veebirakenduses, ühekordse sisselogimise e SSO puhul ka SSO teenuses).  
 
 | testi nr  | tee             | jah |      ei      |
 |-----------|-----------------|-----|--------------|
