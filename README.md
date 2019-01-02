@@ -1,6 +1,8 @@
 
 ### ID-kaardiga autentimine testimine
-Järgnevate testidega saab uurida, kas ID-kaardiga autentimine on õigesti teostatud. Teostuse õigsuse määravad nii välise autentimisteenuse teostus (kui veebirakendus kasutab autentimisteenust) kui ka veebirakenduse enda teostus (kui veebirakendus teeb autentimise ise), samuti seansihalduse teostus (veebirakenduses, ühekordse sisselogimise e SSO puhul ka SSO teenuses).  
+Järgnevate testidega saab uurida, kas ID-kaardiga autentimine on õigesti teostatud. Teostuse õigsuse määravad nii välise autentimisteenuse teostus (kui veebirakendus kasutab autentimisteenust) kui ka veebirakenduse enda teostus (kui veebirakendus teeb autentimise ise), samuti seansihalduse teostus (veebirakenduses, ühekordse sisselogimise e SSO puhul ka SSO teenuses). 
+
+Elemendid: ID-kaardi kaardilugejasse 1) panek 2) väljavõtmine 3) uuesti sissepanek 4) teise inimese kaardi sissepanek 5) autentimine. 6) uuesti autentimine 7) autentimine teise inimese poolt. 8) PIN 1 küsimine. 9) seansi lõpetamine (väljalogimine) kasutaja poolt 10) serveri poolt.
 
 | testi nr  | tee             | jah |      ei      |
 |-----------|-----------------|-----|--------------|
