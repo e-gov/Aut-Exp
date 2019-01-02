@@ -33,7 +33,7 @@ TLS seanss (_TLS session_) on serveri ja sirviku vahel kokkulepitud turvaparamee
 
 ID-kaardi autentimisvoog
 
-[](docs/ID-kaardi-autentimisvoog.PNG)
+![](docs/ID-kaardi-autentimisvoog.PNG)
 
 **
 
