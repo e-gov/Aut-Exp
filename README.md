@@ -31,6 +31,12 @@ TLS seanss (_TLS session_) on serveri ja sirviku vahel kokkulepitud turvaparamee
 
 **
 
+ID-kaardi autentimisvoog
+
+[](docs/ID-kaardi-autentimisvoog.PNG)
+
+**
+
 Repo eesmärk on uurida ja katsetada ID-kaardi kasutamist veebirakendustes:
 
 - ID-kaardiga autentimist traditsioonilisel meetodil (TLS kliendiserdi kaudu)
