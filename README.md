@@ -97,7 +97,7 @@ Sirvikus ava:
 
 `https://<host>:8000`
 
-Rakendus koosneb kahest lehest: avaleht `/` ja autentimisleht `/autendi`. Avalehe laadimisel serveri kliendiserti ei küsi. Vajuta nupule `Autendi`; sellega liigud autentimislehele. Autentimislehe laadimisel nõuab server sirvikult kliendiserti (`connection.renegotiate`). Serveri käivitamisel on seatud väärtus `SSL_OP_NO_SESSION_RESUMPTION_ON_RENEGOTIATION` - see peaks tagama, et seansi ümberkätlemisel tehakse uus seanss. Kahjuks see seadistus ei taga, et sirvik PIN1-te uuesti küsiks. Siiski kontrollib sirvik, et ID-kaarti on sees ja seda ei ole vahepeal välja võetud. Sellistel tingimustel on PIN1 "puhverdamine" aktsepteeritav. Serveri konsoolilt saad jälgida serdi väljalugemisi.
+Rakendus koosneb kahest lehest: avaleht `/` ja autentimisleht `/autendi`. Avalehe laadimisel serveri kliendiserti ei küsi. Vajuta nupule `Autendi`; sellega liigud autentimislehele. Autentimislehe laadimisel nõuab server sirvikult kliendiserti (`connection.renegotiate`). Serveri käivitamisel on seatud väärtus `SSL_OP_NO_SESSION_RESUMPTION_ON_RENEGOTIATION` - see peaks tagama, et seansi ümberkätlemisel tehakse uus seanss. Kahjuks see seadistus ei taga, et sirvik PIN 1-te uuesti küsiks. Siiski kontrollib sirvik, et ID-kaart on sees ja seda ei ole vahepeal välja võetud. Sellistel tingimustel on PIN 1 "puhverdamine" aktsepteeritav. Serveri konsoolilt saad jälgida serdi väljalugemisi.
 
 ### Sertide lugemine ID-kaardilt
 
