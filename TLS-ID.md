@@ -49,11 +49,11 @@ Windows-isse on paigaldatud ID-kaardi baastarkvarasse kuuluv komponent [EstEID S
 
 Kaardi seisundi pärimine (kas kaart on sees?). Windows API pakub selleks võimalusi, nt [Smart Card Removal Policy Service](https://docs.microsoft.com/en-us/windows/security/identity-protection/smart-cards/smart-card-removal-policy-service) ja [SCardStatusA](https://docs.microsoft.com/en-us/windows/desktop/api/winscard/nf-winscard-scardstatusa). Kas ja kuidas need võimalused autentimisvoos võiksid kasutust leida, on selgusetu. Pigem mitte, sest sirvikus töötav Javascript ei saa neile madalataseme funktsioonidele ilma sirvikulaienduse vahenduseta ligi.
 
-Dokumentatsiooni põhjal tundub, et Windows-i [Security & Identity](https://docs.microsoft.com/en-us/windows/desktop/api/_security/) kujundamisel on esiplaanil olnud Windows-arvuti põhised kasutuslood. Nt saab seadistada, et kiipkaardi väljavõtmisel läheb arvuti lukku või kasutaja logitakse (arvutist) välja. Veebirakenduste kasutuslood aga tagaplaanil. 
+Dokumentatsiooni põhjal tundub, et Windows-i [Security & Identity](https://docs.microsoft.com/en-us/windows/desktop/api/_security/) kujundamisel on esiplaanil olnud Windows-arvuti põhised kasutuslood. Nt saab seadistada, et kiipkaardi väljavõtmisel läheb arvuti lukku või kasutaja logitakse (arvutist) välja. Veebirakenduste kasutuslood on aga tagaplaanil. 
 
 Teadaolevalt on ka ID-kaardi tarkvaras üksikasju, mis mõjutavad PIN1 käitumist.
 
-Kokkuvõttes on TLS-põhine ID-kaardiga autentimine pika ahelaga, erinevate organisatsioonide kontrolli all olevaid komponente - ja nende seadistusi (mis tooteti erinevad) hõlmav protsess. Protsess sisaldab  mitmes kohas puhverdamist. Puhvrid on küll vajalikud, kuid puhverdamisega autentimine kas ei tööta või võib annab vale tulemuse. Puhverdamine toob kaasa ka selle, et koguvastutus autentimisfakti eest kipib ahelas hajuma. 
+Kokkuvõttes on TLS-põhine ID-kaardiga autentimine pika ahelaga, erinevate organisatsioonide kontrolli all olevaid komponente - ja nende seadistusi (mis tooteti erinevad) hõlmav protsess. Protsess sisaldab  mitmes kohas puhverdamist. Puhvrid on küll vajalikud, kuid puhverdamisega autentimine kas ei tööta või võib annab vale tulemuse. Puhverdamine toob kaasa ka selle, et koguvastutus autentimisfakti eest kipub ahelas hajuma. 
 
 Protsessi võib küll uurida - nii standardite, koodi kui ka praktilise katsetamise ja testimise tasandil - kuid see on aeganõudev. Ühel inimesel on ka raske süüvida ahela kõigisse lülidesse.
 
