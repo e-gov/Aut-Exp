@@ -1,4 +1,3 @@
-
 ### ID-kaardiga autentimine testimine
 Järgnevate testidega saab uurida, kas ID-kaardiga autentimine on õigesti teostatud. Teostuse õigsuse määravad nii välise autentimisteenuse teostus (kui veebirakendus kasutab autentimisteenust) kui ka veebirakenduse enda teostus (kui veebirakendus teeb autentimise ise), samuti seansihalduse teostus (veebirakenduses, ühekordse sisselogimise e SSO puhul ka SSO teenuses). 
 
@@ -34,6 +33,10 @@ TLS seanss (_TLS session_) on serveri ja sirviku vahel kokkulepitud turvaparamee
 ID-kaardi autentimisvoog
 
 ![](docs/ID-kaardi-autentimisvoog.PNG)
+
+**
+
+Detailsem kirjeldus: [TLS-põhine ID-kaardiga autentimine](TLS-ID.md).
 
 **
 
