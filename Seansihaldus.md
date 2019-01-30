@@ -44,7 +44,9 @@ Seanss on seotud ka kasutaja seadmega, täpsemalt sirvikuga.
 
 **Seansihaldus** rakenduse tehniliste omaduste kompleks, millega tagatakse, et rakendus, eriti selle serveripool, teab, et sirviku taga on sama kasutaja, kes seansi loomisel autenditi.
 
-Seansiga koos kasutatakse mõistet **olek** (_state_). Eriti küsimuses, kummal pool (või mõlemal pool) olekut hoitakse. Seansi- e olekuvaba (_sessionless_, _stateless_) suhtlus on selline, kus suhet hoiab ülal ainult üks pool (klient s.t sirvik).
+Veebirakenduses tegeleb seansihaldusega tavaliselt eraldi komponent. Seansihaldus on tihedalt seotud, kuid siiski erineb  autentimisest, pääsuhaldusest ja identiteedihaldusest laiemas mõttes. Seetõttu võib kohata väikeseid süsteeme, kus autentimine, seansi- ja pääsuhaldus on ühe komponendi kanda.
+
+Seansiga seondub **seansiseisundi** hoidmise küsimus. Veebirakendust kasutab üheaegselt palju kasutajaid. Igaüks neist on oma tööjärjega oma seisus. Veebirakendus peab korraldama nende seisude ("olek", _state_) hoimise. Oluline küsimus on kummal pool (või mõlemal pool) olekut hoitakse. **Seansi- e olekuvabaks** (_sessionless_, _stateless_) suhtluseks nimetatakse sellist, kus suhet hoiab ülal ainult üks pool (klient s.t sirvik).
 
 ## Seansi elukaar
 
@@ -82,7 +84,7 @@ Seansi kontrollimise vajadus tuleneb sellest, et veebirakendus on hajusrakendus.
 
 Sirvik ja server suhtlevad üksteisega peamiselt HTTP protokolli alusel, päring-vastus režiimis. Erandid: _server push_ tehnoloogia, WebRTC protokoll.
 
-Seanss hõlmab enamat kui üht päring-vastus suhtlusakti. Seetõttu on vaja kontrollida, kas suhtluspartner on ikka sama. Serveril on püsiv identiteet - DNS domeeninime sisaldav URL. Sirvikul - ja seda kasutaval kasutajal - sellist püsiidentiteeti ei ole. Sirvikupoole identiteet luuakse kasutaja autentimisega. Server väljastab sirvikule seansitõendi (_session token_). Igal järgmisel pöördumisel esitab sirvik seansitõendi. Server peab kontrollima, et tõend on õige ja kehtiv.
+Seanss hõlmab enamat kui üht päring-vastus suhtlusakti. Seetõttu on vaja kontrollida, kas suhtluspartner on ikka sama. Serveril on püsiv identiteet - DNS domeeninime sisaldav URL. Sirvikul - ja seda kasutaval kasutajal - sellist püsiidentiteeti ei ole. Sirvikupoole identiteet luuakse kasutaja autentimisega. Server väljastab sirvikule **seansitõendi** (_session token_). Igal järgmisel pöördumisel esitab sirvik seansitõendi. Server peab kontrollima, et tõend on õige ja kehtiv.
 
 Seansihalduse kontekstis on olulised ka sirviku päringud teistel aadressidel, kui allikaadress, asuvate ressursside laadimiseks. Need päringud jagunevad:
 
@@ -210,7 +212,7 @@ Erineb traditsioonilisest meetodist selle poolest, et:
   - kontrollitakse allkirja
   - tõendi ajalist kehtivust.
 
-### Veebitõend sirvikupoolses seansihoidlas (Session Storage)
+### Veebitõend sirvikupoolses seansihoidlas
 
 Erinevus eelnevast on selles, et:
 - Server saadab veebitõendi (JWT) sirvikusse HTTP vastuse kehas või päises (header).
