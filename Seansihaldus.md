@@ -1,12 +1,24 @@
----
-permalink: Seansihaldus
----
-
 # Seansihaldus
-{: .no_toc}
 
-- TOC
-{:toc}
+* [Eesmärk](#eesmärk)
+* [Seanss ja selle haldus](#seanss-ja-selle-haldus)
+* [Seansi elukaar](#seansi-elukaar)
+    * [Seansi loomine](#seansi-loomine)
+    * [Seansi kontrollimine](#seansi-kontrollimine)
+    * [Seansi aegumine](#seansi-aegumine)
+    * [Seansi pikendamine](#seansi-pikendamine)
+    * [Seansi lõpetamine](#seansi-lõpetamine)
+    * [Seansi puhverdamine](#seansi-puhverdamine)
+    * [Ühekordne sisse- ja väljalogimine (SSO)](#ühekordne-sisse--ja-väljalogimine-sso)
+    * [Seansi "üleandmine"](#seansi-üleandmine)
+* [Seansihalduse skeemi valik](#seansihalduse-skeemi-valik)
+    * [Valikukohad](#valikukohad)
+    * [Traditsiooniline skeem (juhusõne küpsises)](#traditsiooniline-skeem-juhusõne-küpsises)
+    * [Veebitõend küpsises](#veebitõend-küpsises)
+    * [Veebitõend sirvikupoolses seansihoidlas (Session Storage)](#veebitõend-sirvikupoolses-seansihoidlas-session-storage)
+    * [Tühistusnimekirja kasutamine](#tühistusnimekirja-kasutamine)
+    * [Skeemi valimine](#skeemi-valimine)
+* [Ohud](#ohud)
 
 ## Eesmärk
 
@@ -45,7 +57,9 @@ Seansiga koos kasutatakse mõistet (state). Eriti küsimuses, kummal pool (või 
 
 ### Seansi loomine
 
-Seanss luuakse vahetult kasutaja autentimise järel. Autentimisteenuse TARA kasutamisel on autentimise tulemuseks:
+Seanss luuakse vahetult kasutaja autentimise järel.
+
+Nt. Autentimisteenuse TARA kasutamisel on autentimise tulemuseks:
 
 - kasutaja sirviku kaudu tulnud OpenID Connect tagasipöördumispäring (vt https://e-gov.github.io/TARA-Doku/TehnilineKirjeldus#42-tagasisuunamisp%C3%A4ring)
 - TARA serverist saadud ja kontrollitud identsustõend (vt https://e-gov.github.io/TARA-Doku/TehnilineKirjeldus#431-identsust%C3%B5end).
