@@ -15,7 +15,7 @@
     * [Valikukohad](#valikukohad)
     * [Traditsiooniline skeem (juhusõne küpsises)](#traditsiooniline-skeem-juhusõne-küpsises)
     * [Veebitõend küpsises](#veebitõend-küpsises)
-    * [Veebitõend sirvikupoolses seansihoidlas (Session Storage)](#veebitõend-sirvikupoolses-seansihoidlas-session-storage)
+    * [Veebitõend sirvikupoolses seansihoidlas](#veebitõend-sirvikupoolses-seansihoidlas)
     * [Tühistusnimekirja kasutamine](#tühistusnimekirja-kasutamine)
     * [Skeemi valimine](#skeemi-valimine)
 * [Ohud](#ohud)
