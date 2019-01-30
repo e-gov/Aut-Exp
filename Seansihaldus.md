@@ -224,7 +224,7 @@ Suure hulga klientide puhul peetakse seansihoidlat põhimälus (_in-memory_), mi
 
 ### Tühistusnimekirja kasutamine
 
-Tühistusnimekirja (**revocation list**) pidamine on otstarbekas siis, kui tahetakse teostada väljalogimise funktsionaalsus. Kui rahuldab ka veebitõendi aegumine või sirvikus saki sulgemine (sirvikupoolse seansimälu kasutamisel), siis ei ole tühistusnimekirja vaja.
+Tühistusnimekirja (_revocation list_) pidamine on otstarbekas siis, kui tahetakse teostada väljalogimise funktsionaalsus. Kui rahuldab ka veebitõendi aegumine või sirvikus saki sulgemine (sirvikupoolse seansimälu kasutamisel), siis ei ole tühistusnimekirja vaja.
 - Tühistusnimekiri on serveri poolel peetav nimekiri tühistatud veebitõenditest.
 - Kasutaja igal pöördumisel kontrollib server, et sirvikust esitatud veebitõend ei ole kantud tühistusnimekirja.
 - Veebitõend kantakse tühistusnimekirja väljalogimisel.
